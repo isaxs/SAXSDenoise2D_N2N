@@ -7,7 +7,7 @@ This Python script trains a **Noise2Noise (N2N) denoising neural network** speci
 - Employs **Channel Attention (Squeeze-and-Excitation)** and **SiLU activations** for stable gradients across the dynamic range.
 
 **Data Handling**
-- Preloads entire HDF5 datasets into RAM as `float32` (cropped from 1028×1028 to 1024×1024) for maximum I/O efficiency.
+- Preloads entire HDF5 datasets into RAM as `float32` (cropped from 1028×512 to 1024×512) for maximum I/O efficiency.
 - Requires a fixed disk split into `dataset/train`, `dataset/val`, and `dataset/test` subdirectories, ensuring strict isolation of test data (v08 feature).
 
 **Training Strategy**
